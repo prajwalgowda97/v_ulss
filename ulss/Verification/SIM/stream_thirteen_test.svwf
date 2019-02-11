@@ -1,0 +1,66 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+array unset createdGroup
+array set createdGroup {}
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.rate_limiter_16to4_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.rate_limiter_16to4_rstn}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.rate_limiter_16to4_sw_rst}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.sch_reg_wr_en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.sch_reg_wr_addr[4:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.sch_reg_wr_data[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.schduler_reg_config_inst.IN_STREAM_13_REG[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.schduler_reg_config_inst.OUT_STREAM_3_REG[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.pck_str_empty_13}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.pck_rd_en_grnt_13}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.in_sop_13}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.in_stream_13[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.in_eop_13}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.out_sop_3}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.out_stream_3_valid}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.out_stream_3[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.out_eop_3}]}
+	} ]]
+
+waveform xview limits 0 8000ns

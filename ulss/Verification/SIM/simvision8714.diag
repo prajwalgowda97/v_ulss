@@ -1,0 +1,135 @@
+*** Message Type: info ***
+When: Mon Apr 21 03:44:23 PM IST 2025
+SimVision started.
+Version: TOOL:  simvision(64)   20.09-s009
+User: sgeuser33
+Host: compute-srv3.eda.atme.in
+Platform: Linux/x86_64/3.10.0-1160.118.1.el7.x86_64
+Started: Mon Apr 21 03:44:23 PM IST 2025
+Command: /tools/cadence_march2021/XCELIUM2009/tools.lnx86/simvision/bin/64bit/simvision.exe wave.shm
+Work Directory: /home/sgeuser33/github/ulss/Verification/SIM
+ 
+*** Message Type: info ***
+When: Mon Apr 21 03:44:23 PM IST 2025
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Mon Apr 21 03:44:28 PM IST 2025
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Mon Apr 21 03:44:30 PM IST 2025
+Create utility window: "Properties"
+ 
+*** Message Type: error ***
+When: Tue Apr 22 11:37:05 AM IST 2025
+bad keyword "XdndSelection": should be pattern
+    while executing
+"runBusy {
+        #
+        # Execute the "do" script
+        #
+        set _buffer ""
+        uplevel $parts(redo)
+        set parts(redo) $_buffer
+
+..."
+    (object "::manager0" method "::undo::Manager::action" body line 65)
+    invoked from within
+"$itk_option(-undocommand) action "Drag&Drop" {
+            do {
+               #
+              # Capture the dragged ids, then delete them
+            #
+              # First time, derive OLDIDS from $_dr..."
+    (object "::.waveWindow0.work.user.waveset" method "::WaveSet::_drop" body line 65)
+    invoked from within
+"::.waveWindow0.work.user.waveset _drop {XdndSelection selection doesn't exist or form "SV_SIGNAL" not defined} SV_WAVEFORM default {8714 ::.waveWindow..."
+    (in namespace inscope "::WaveSet" script line 1)
+    invoked from within
+"namespace inscope ::WaveSet {::.waveWindow0.work.user.waveset _drop {XdndSelection selection doesn't exist or form "SV_SIGNAL" not defined} SV_WAVEFOR..."
+    ("after" script)
+ 
+*** Message Type: info ***
+When: Tue Apr 22 11:46:01 AM IST 2025
+Create source window: "Source Browser 1"
+ 
+*** Message Type: info ***
+When: Tue Apr 22 11:46:05 AM IST 2025
+Connect to Simulator
+      Design: worklib.ulss_top:sv
+   Languages: verilog assertion
+   Simulator: Xcelium ppe
+     Version: TOOL: ippe(64)        20.09-s009
+        User: sgeuser33
+        Host: compute-srv3.eda.atme.in
+Time Started: Tue Apr 22 11:46:05 AM IST 2025
+  Process ID: 14621
+   Directory: /home/sgeuser33/github/ulss/Verification/SIM
+     Command: /tools/cadence_march2021/XCELIUM2009/tools.lnx86/simvision/bin/64bit/ippe.exe -nocopyright -nowarn DLNOCL -cdslib /home/sgeuser33/github/ulss/Verification/SIM/./xcelium.d/run.lnx8664.20.09.d/cds.lib -snapshot worklib.ulss_top:sv -64
+
+ 
+*** Message Type: info ***
+When: Tue Apr 22 11:46:06 AM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Tue Apr 22 11:46:10 AM IST 2025
+Delete source window: "Source Browser 1"
+ 
+*** Message Type: info ***
+When: Tue Apr 22 12:09:00 PM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Tue Apr 22 01:05:17 PM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Tue Apr 22 01:59:36 PM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Tue Apr 22 02:04:36 PM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Tue Apr 22 02:05:28 PM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Tue Apr 22 02:07:50 PM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Thu Apr 24 09:49:27 AM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Thu Apr 24 10:38:44 AM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Thu Apr 24 10:55:55 AM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Thu Apr 24 11:32:23 AM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Thu Apr 24 11:44:50 AM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Thu Apr 24 11:52:07 AM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Thu Apr 24 12:34:00 PM IST 2025
+Exit Simulator: user
+ 
+*** Message Type: info ***
+When: Thu Apr 24 12:34:21 PM IST 2025
+SimVision Exit.
+ 

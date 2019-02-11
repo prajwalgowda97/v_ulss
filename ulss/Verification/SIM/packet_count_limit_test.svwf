@@ -1,0 +1,346 @@
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Conditions
+#
+set expression {ulss_top.dut.schduler_reg_config_inst.OUT_STREAM_0_REG[63:0]}
+if {[catch {condition new -name  {OUT_STREAM_0_REG[63:0]ulss_top.dut.out_eop_1} -expr $expression}] != ""} {
+    condition set -using {OUT_STREAM_0_REG[63:0]ulss_top.dut.out_eop_1} -expr $expression
+}
+set expression ulss_top.dut.in_eop_2
+if {[catch {condition new -name  condition -expr $expression}] != ""} {
+    condition set -using condition -expr $expression
+}
+set expression ulss_top.dut.in_eop_2
+if {[catch {condition new -name  condition_2 -expr $expression}] != ""} {
+    condition set -using condition_2 -expr $expression
+}
+set expression ulss_top.dut.in_eop_2
+if {[catch {condition new -name  condition_3 -expr $expression}] != ""} {
+    condition set -using condition_3 -expr $expression
+}
+set expression ulss_top.dut.in_eop_2
+if {[catch {condition new -name  condition_4 -expr $expression}] != ""} {
+    condition set -using condition_4 -expr $expression
+}
+set expression ulss_top.dut.in_eop_2
+if {[catch {condition new -name  condition_5 -expr $expression}] != ""} {
+    condition set -using condition_5 -expr $expression
+}
+set expression ulss_top.dut.in_eop_2
+if {[catch {condition new -name  condition_6 -expr $expression}] != ""} {
+    condition set -using condition_6 -expr $expression
+}
+set expression ulss_top.dut.in_eop_2
+if {[catch {condition new -name  condition_7 -expr $expression}] != ""} {
+    condition set -using condition_7 -expr $expression
+}
+set expression ulss_top.dut.in_eop_2
+if {[catch {condition new -name  condition_8 -expr $expression}] != ""} {
+    condition set -using condition_8 -expr $expression
+}
+
+array unset createdGroup
+array set createdGroup {}
+#
+# Groups
+#
+if {[catch {group get -using [list in_sop]}]} {
+set createdGroup([list in_sop]) 1
+catch {group new -name in_sop -overlay 0}
+}
+if {[catch {group get -using [list in_stream]}]} {
+set createdGroup([list in_stream]) 1
+catch {group new -name in_stream -overlay 0}
+}
+if {[catch {group get -using [list Group 3]}]} {
+set createdGroup([list Group 3]) 1
+catch {group new -name {Group 3} -overlay 0}
+}
+if {[catch {group get -using [list Group 4]}]} {
+set createdGroup([list Group 4]) 1
+catch {group new -name {Group 4} -overlay 0}
+}
+if {[catch {group get -using [list in_eop]}]} {
+set createdGroup([list in_eop]) 1
+catch {group new -name in_eop -overlay 0}
+}
+if {[catch {group get -using [list out_eop]}]} {
+set createdGroup([list out_eop]) 1
+catch {group new -name out_eop -overlay 0}
+}
+if {[catch {group get -using [list out_sop]}]} {
+set createdGroup([list out_sop]) 1
+catch {group new -name out_sop -overlay 0}
+}
+if {[catch {group get -using [list out_stream]}]} {
+set createdGroup([list out_stream]) 1
+catch {group new -name out_stream -overlay 0}
+}
+if {[catch {group get -using [list pck_rd_en_grant]}]} {
+set createdGroup([list pck_rd_en_grant]) 1
+catch {group new -name pck_rd_en_grant -overlay 0}
+}
+if {[catch {group get -using [list pck_str_empty]}]} {
+set createdGroup([list pck_str_empty]) 1
+catch {group new -name pck_str_empty -overlay 0}
+}
+if {[info exists createdGroup([list in_sop])]} {
+group using in_sop
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {ulss_top.dut.in_sop_0}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_2}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_1}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_3}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_4}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_5}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_15}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_14}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_13}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_12}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_11}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_10}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_9}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_8}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_7}]} ] \
+    [subst  {[format {ulss_top.dut.in_sop_6}]} ]
+}
+
+if {[info exists createdGroup([list in_stream])]} {
+group using in_stream
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {ulss_top.dut.in_stream_0[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_1[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_3[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_2[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_4[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_5[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_6[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_7[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_8[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_10[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_9[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_11[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_12[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_13[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_14[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.in_stream_15[63:0]}]} ]
+}
+
+if {[info exists createdGroup([list Group 3])]} {
+group using {Group 3}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {ulss_top.dut.in_eop_0}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_1}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_2}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_3}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_15}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_14}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_13}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_12}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_11}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_10}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_9}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_8}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_7}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_6}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_5}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_4}]} ]
+}
+
+if {[info exists createdGroup([list Group 4])]} {
+group using {Group 4}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    {Group 3}
+}
+
+if {[info exists createdGroup([list in_eop])]} {
+group using in_eop
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {ulss_top.dut.in_eop_0}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_1}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_2}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_3}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_4}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_5}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_6}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_7}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_8}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_9}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_10}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_11}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_12}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_13}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_14}]} ] \
+    [subst  {[format {ulss_top.dut.in_eop_15}]} ]
+}
+
+if {[info exists createdGroup([list out_eop])]} {
+group using out_eop
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {ulss_top.dut.out_eop_3}]} ] \
+    [subst  {[format {ulss_top.dut.out_eop_2}]} ] \
+    [subst  {[format {ulss_top.dut.out_eop_1}]} ] \
+    [subst  {[format {ulss_top.dut.out_eop_0}]} ]
+}
+
+if {[info exists createdGroup([list out_sop])]} {
+group using out_sop
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {ulss_top.dut.out_sop_3}]} ] \
+    [subst  {[format {ulss_top.dut.out_sop_2}]} ] \
+    [subst  {[format {ulss_top.dut.out_sop_1}]} ] \
+    [subst  {[format {ulss_top.dut.out_sop_0}]} ]
+}
+
+if {[info exists createdGroup([list out_stream])]} {
+group using out_stream
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {ulss_top.dut.out_stream_0[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.out_stream_0_valid}]} ] \
+    [subst  {[format {ulss_top.dut.out_stream_1[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.out_stream_2[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.out_stream_1_valid}]} ] \
+    [subst  {[format {ulss_top.dut.out_stream_2_valid}]} ] \
+    [subst  {[format {ulss_top.dut.out_stream_3[63:0]}]} ] \
+    [subst  {[format {ulss_top.dut.out_stream_3_valid}]} ]
+}
+
+if {[info exists createdGroup([list pck_rd_en_grant])]} {
+group using pck_rd_en_grant
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_0}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_1}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_2}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_3}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_4}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_5}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_6}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_7}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_8}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_9}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_10}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_11}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_12}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_13}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_14}]} ] \
+    [subst  {[format {ulss_top.dut.pck_rd_en_grnt_15}]} ]
+}
+
+if {[info exists createdGroup([list pck_str_empty])]} {
+group using pck_str_empty
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+group insert \
+    [subst  {[format {ulss_top.dut.pck_str_empty_0}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_1}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_2}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_3}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_4}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_5}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_6}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_7}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_8}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_9}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_10}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_11}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_12}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_13}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_14}]} ] \
+    [subst  {[format {ulss_top.dut.pck_str_empty_15}]} ] \
+    {### cdivider}
+}
+
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.rate_limiter_16to4_clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.rate_limiter_16to4_rstn}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.rate_limiter_16to4_sw_rst}]}
+	} ]]
+set id [waveform add -cdivider divider]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.sch_reg_wr_en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.sch_reg_wr_addr[4:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.sch_reg_wr_data[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.schduler_reg_config_inst.OUT_STREAM_0_REG[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.schduler_reg_config_inst.IN_STREAM_0_REG[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.pck_str_empty_0}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.pck_rd_en_grnt_0}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.in_sop_0}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.in_stream_0[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.in_eop_0}]}
+	} ]]
+set id [waveform add -cdivider divider]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.out_sop_0}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.out_stream_0[63:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.out_stream_0_valid}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {ulss_top.dut.out_eop_0}]}
+	} ]]
+set id [waveform add -cdivider divider]
+
+waveform xview limits 0 1477ns

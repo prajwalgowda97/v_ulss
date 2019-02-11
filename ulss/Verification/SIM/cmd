@@ -1,0 +1,41 @@
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1001 +UVM_TESTNAME=empty_packet_store_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1006 +UVM_TESTNAME=in_stream_zero_reg_test
+#irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1007 +UVM_TESTNAME=maximum_token_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1008 +UVM_TESTNAME=maximun_packet_count_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1009 +UVM_TESTNAME=out_stream_zero_reg_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1010 +UVM_TESTNAME=packet_count_limit_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1011 +UVM_TESTNAME=reset_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1012 +UVM_TESTNAME=soft_reset_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1013 +UVM_TESTNAME=stream_map_test.
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1014 +UVM_TESTNAME=zero_packet_count_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1021 +UVM_TESTNAME=concurrent_stream_test 
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1024 +UVM_TESTNAME=toggle_test 
+
+#irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1021 +UVM_TESTNAME=reg_fifteen_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1025 +UVM_TESTNAME=stream_one_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1026 +UVM_TESTNAME=stream_two_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1027 +UVM_TESTNAME=stream_three_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1029 +UVM_TESTNAME=stream_six_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1028 +UVM_TESTNAME=stream_seven_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1031 +UVM_TESTNAME=stream_eight_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1032 +UVM_TESTNAME=stream_nine_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1033 +UVM_TESTNAME=stream_eleven_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1034 +UVM_TESTNAME=stream_twelve_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1035 +UVM_TESTNAME=stream_thirteen_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1056 +UVM_TESTNAME=stream_fourteen_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1078 +UVM_TESTNAME=stream_fifteen_test
+
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1079 +UVM_TESTNAME=randomization_test
+
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1079 +UVM_TESTNAME=rand_1_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1079 +UVM_TESTNAME=rand_2_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1079 +UVM_TESTNAME=rand_3_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1079 +UVM_TESTNAME=rand_4_test
+irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1079 +UVM_TESTNAME=rand_5_test
+#irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1079 +UVM_TESTNAME=rand_6_test
+#irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1079 +UVM_TESTNAME=rand_7_test
+#irun -access +rwc -f compile_list.f -coverage all -covdut rate_limiter_16to4 -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d -seed 1079 +UVM_TESTNAME=rand_8_test
+
+
+
+

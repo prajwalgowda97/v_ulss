@@ -1,0 +1,4 @@
+s1(11Feb2019:20:43:36):  irun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=stream_eight_test 
+s2(11Feb2019:20:44:01):  irun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=stream_eight_test 
+s3(11Feb2019:20:45:01):  irun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=stream_eight_test 
+s4(11Feb2019:20:46:36):  irun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=stream_fifteen_test 
